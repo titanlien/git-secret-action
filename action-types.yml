@@ -3,3 +3,5 @@ inputs:
     type: string
   gpg-private-key-passphrase:
     type: string
+  git-repo-path:
+    type: string
