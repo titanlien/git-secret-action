@@ -1,13 +1,7 @@
 #!/bin/sh
 
-if [ ! -z "$3" ]; then
-  export GIT_REPO_PATH="/github/workspace/$3"
-else
-  export GIT_REPO_PATH="/github/workspace"
-fi
-
-cd $GIT_REPO_PATH
-git config --global --add safe.directory $GIT_REPO_PATH
+cd /github/workspace
+git config --global --add safe.directory /github/workspace
 export GPG_TTY=$(tty)
 
 echo "Revealing the secrets in the repository..."
