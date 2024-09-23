@@ -10,9 +10,13 @@ inputs:
   gpg-private-key-passphrase:
     description: 'The passphrase for the private key, if any'
     required: false
+  git-reop-path:
+    description: 'The path store the directory of .gitsecret, if actios/checkout setup path'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.gpg-private-key }}
     - ${{ inputs.gpg-private-key-passphrase }}
+    - ${{ inputs.git-reop-path }}
