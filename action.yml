@@ -1,4 +1,4 @@
-name: 'Git Secret Reveal Action'
+name: 'Git Secret Reveal in Action'
 description: 'Reveal the secrets committed into your repo'
 branding:
   icon: unlock
