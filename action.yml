@@ -1,4 +1,4 @@
-name: 'Git Secret Reveal Action'
+name: 'Git Secret Reveal in Action'
 description: 'Reveal the secrets committed into your repo'
 branding:
   icon: unlock
@@ -10,9 +10,13 @@ inputs:
   gpg-private-key-passphrase:
     description: 'The passphrase for the private key, if any'
     required: false
+  git-repo-path:
+    description: 'The path store the directory of .gitsecret, if actions/checkout setup its path'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.gpg-private-key }}
     - ${{ inputs.gpg-private-key-passphrase }}
+    - ${{ inputs.git-repo-path }}
