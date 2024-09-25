@@ -11,7 +11,7 @@ inputs:
     description: 'The passphrase for the private key, if any'
     required: false
   git-repo-path:
-    description: 'The path store the directory of .gitsecret, if actions/checkout setup its path'
+    description: 'The path to the .gitsecret directory (excluding the .gitsecret part). This is the repository root path by default.'
     required: false
 runs:
   using: 'docker'
