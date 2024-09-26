@@ -6,8 +6,10 @@ else
   export GIT_REPO_PATH="/github/workspace"
 fi
 
-cd $GIT_REPO_PATH
+echo "GIT_REPO_PATH=$GIT_REPO_PATH" && cd $GIT_REPO_PATH
 git config --global --add safe.directory $GIT_REPO_PATH
+echo $?
+
 export GPG_TTY=$(tty)
 
 echo "Revealing the secrets in the repository..."
